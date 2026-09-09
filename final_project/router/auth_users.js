@@ -50,7 +50,7 @@ regd_users.post("/login", (req, res) => {
     accessToken: accessToken
   });
 });
-// Add a book review
+// Add or modify a book review
 regd_users.put("/auth/review/:isbn", (req, res) => {
   const isbn = req.params.isbn;
   const username = req.session.authorization.username;
