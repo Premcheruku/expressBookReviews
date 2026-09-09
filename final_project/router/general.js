@@ -107,6 +107,22 @@ public_users.get('/title/:title', function (req, res) {
 
   res.send(JSON.stringify(result, null, 2));
 });
+// Task 13 - Get book details based on title using Axios and async/await
+public_users.get('/async-title/:title', async function (req, res) {
+    try {
+      const title = req.params.title;
+  
+      const response = await axios.get(
+        'http://localhost:5000/title/' + encodeURIComponent(title)
+      );
+  
+      res.send(JSON.stringify(response.data, null, 2));
+    } catch (error) {
+      res.status(500).json({
+        message: "Error retrieving books by title"
+      });
+    }
+  });
 // Task 12 - Get book details based on author using Axios and async/await
 public_users.get('/async-author/:author', async function (req, res) {
     try {
