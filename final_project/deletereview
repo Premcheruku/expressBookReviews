@@ -1,0 +1,2 @@
+curl -X DELETE http://localhost:5000/customer/auth/review/1 -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiaWF0IjoxNzg4OTM5MDc2LCJleHAiOjE3ODg5NDI2NzZ9.EBmr8MBgb1vC6rJXsfvk98s4h2ny7WaHV-7imVmm_oQ"
+{"message":"Invalid or expired token"}
